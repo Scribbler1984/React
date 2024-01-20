@@ -1,0 +1,134 @@
+.nav {
+    height: 80px;
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.image {
+    width: 150px;
+    position: absolute;
+    top: 17px;
+    left: 12%;
+}
+
+.unordered {
+    float: right;
+    margin-right: 25px;
+    list-style: none;
+}
+
+.liststyle {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+.linkstyle {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.linkstyle:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.15s linear;
+}
+
+.linkstyle:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.label i {
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1118px) {
+    .image {
+        left: 8%;
+    }
+}
+
+@media (max-width: 994px) {
+    .image {
+        left: 6%;
+        top: 20px;
+        width: 130px;
+    }
+
+    .linkstyle {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .nav {
+        opacity: 1;
+        background-color: #000000;
+    }
+
+    #btn {
+        display: block;
+    }
+
+    .unordered {
+        z-index: 9999;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #000000;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    .liststyle {
+        display: block;
+        margin: 50px;
+        line-height: 30px;
+        padding: 10px;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+    }
+
+    .linkstyle {
+        font-size: 20px;
+    }
+
+    #check:checked ~ .unordered {
+        left: 0;
+    }
+
+    #check:checked ~ label #btn {
+        display: none;
+    }
+
+    #check:checked ~ label #cancel {
+        display: block;
+    }
+}

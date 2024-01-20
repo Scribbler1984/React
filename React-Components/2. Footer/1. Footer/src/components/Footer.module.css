@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+  }
+
+.Footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.Container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.UnorderedList {
+    list-style: none;
+}
+
+.Row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Column {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.H4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.H4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.List:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.Anchor {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.Anchor:hover {
+    color: #ffffff;
+    padding-left: -10px;
+}
+
+.Social {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.Social:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+    .Column {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px){
+    .Column {
+        width: 100%;
+    }
+}
